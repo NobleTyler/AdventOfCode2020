@@ -19,7 +19,6 @@ class PasswordPhilosophy: Solution {
         var ret = 0
         passwordList.forEach{ entry ->
             val  rule = entry.first.split('-',' ')
-            print(rule)
             val min = rule[0].toInt()
             val max = rule[1].toInt()
             val key = rule[2].single()
@@ -45,7 +44,6 @@ class PasswordPhilosophy: Solution {
             }
             if (first xor second ) {
                 ret++
-                println("$first, $second $key $rule")
             }
         }
         return ret

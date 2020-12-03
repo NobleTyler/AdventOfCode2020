@@ -6,6 +6,6 @@ fun main(){
     val passwordPhilosophy = PasswordPhilosophy()
     val tobogganTrajectory = TobogganTrajectory()
     println("On the first day of Christmas my code gave to me: "+repKit.partOne()+" and "+repKit.partTwo())
-    println("On the second day of Christmas my code gave to me: "+passwordPhilosophy.partOne()+" and "+ passwordPhilosophy.partTwo())
-    println("On the third day of Christmas my code gave to me: "+tobogganTrajectory.partOne()+" and "+ tobogganTrajectory.partTwo())
+    println("On the second day of Christmas my code gave to me: "+passwordPhilosophy.partOne(passwordPhilosophy.process())+" and "+ passwordPhilosophy.partTwo(passwordPhilosophy.process()))
+    println("On the third day of Christmas my code gave to me: "+tobogganTrajectory.partOne(tobogganTrajectory.process(),3,1) +" and "+ tobogganTrajectory.partTwo())
 }
