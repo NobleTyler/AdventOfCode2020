@@ -2,7 +2,7 @@ package dayTwo
 import org.junit.Test
 import kotlin.test.assertEquals
 
-class passwordTest {
+class PasswordTest {
     val pword = PasswordPhilosophy()
 
     @Test
