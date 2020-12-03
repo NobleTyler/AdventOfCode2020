@@ -3,6 +3,7 @@ package dayThree
 import Solution
 import java.io.File
 import java.io.InputStream
+import java.math.BigInteger
 
 class TobogganTrajectory:Solution {
     override fun process() : ArrayList<String> {
@@ -20,17 +21,25 @@ class TobogganTrajectory:Solution {
         val actor = Actor(testHill)
         while (actor.yPosition < actor.hillHeight){
              if(testHill[actor.yPosition][actor.xPosition] == '#'){
-                println("${actor.xPosition}-X and ${actor.yPosition+1}-Y  is ${testHill[actor.yPosition][actor.xPosition]}")
                  accidents++
              }
             actor.moveVertical(vertical)
             actor.moveHorizontal(horizontal)
         }
-        println(testHill[322])
         return accidents
     }
-    override fun partTwo(){
-
+    override fun partTwo(): BigInteger {
+        val routeAccidents = mutableListOf<Int>()
+        var accumulator = BigInteger("1")
+        routeAccidents.add(partOne(process(),1,1))
+        routeAccidents.add(partOne(process(),3,1))
+        routeAccidents.add(partOne(process(),5,1))
+        routeAccidents.add(partOne(process(),7,1))
+        routeAccidents.add(partOne(process(),1,2))
+        routeAccidents.forEach{num ->
+            accumulator*=num.toBigInteger()
+        }
+        return accumulator
     }
 }
 
@@ -48,9 +57,5 @@ class Actor(hillArray: ArrayList<String>) {
     }
     fun moveVertical(step: Int){
         yPosition+= step
-    }
-    fun reset(){
-        xPosition = 0
-        yPosition = 0
     }
 }
