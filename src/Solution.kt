@@ -1,4 +1,5 @@
 interface Solution {
+
     fun process(): Any {
         return println("processing...")
     }
