@@ -1,0 +1,4 @@
+package daySeven
+
+class HandyTest {
+}
