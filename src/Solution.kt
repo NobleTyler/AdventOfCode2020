@@ -1,12 +1,12 @@
 interface Solution {
 
-    fun process(): Any {
-        return println("processing...")
+    fun process(): Any?{
+        return -1
     }
-    fun partOne():Any{
-        return println("Work in progress")
+    fun partOne(): Any? {
+        return -1
     }
-    fun partTwo():Any{
-       return println("Work in progress")
+    fun partTwo():Any?{
+       return -1
     }
 }
