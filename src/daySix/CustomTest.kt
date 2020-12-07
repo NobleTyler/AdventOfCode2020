@@ -1,0 +1,4 @@
+package daySix
+
+class CustomTest {
+}
