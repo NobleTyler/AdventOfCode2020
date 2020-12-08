@@ -6,7 +6,7 @@ import java.io.InputStream
 
 class  RepairKit :Solution{
         private val sKVal = 2020
-        override fun process(): MutableList<Int> {
+        fun process(): MutableList<Int> {
                 val inputStream: InputStream = File("src/dayOne/input.txt").inputStream()
                 val numberList = mutableListOf<Int>()
                 inputStream.bufferedReader().useLines { lines -> lines.forEach { numberList.add(it.toInt())} }

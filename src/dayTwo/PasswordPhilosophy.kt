@@ -5,7 +5,7 @@ import java.io.File
 import java.io.InputStream
 
 class PasswordPhilosophy: Solution {
-    override fun process(): MutableList<Pair<String,String>> {
+     fun process(): MutableList<Pair<String,String>> {
         val inputStream: InputStream = File("src/dayTwo/input").inputStream()
         val passwordList = mutableListOf<Pair<String,String>>()
         inputStream.bufferedReader().useLines { lines -> lines.forEach {

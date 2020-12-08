@@ -5,7 +5,7 @@ import java.io.File
 import java.io.InputStream
 
 class BinaryBoarding(private val inputFile : String):Solution {
-    override fun process(): MutableList<String> {
+     fun process(): MutableList<String> {
         val inputStream: InputStream = File(inputFile).inputStream()
         val boardingList = mutableListOf<String>()
         inputStream.bufferedReader().useLines { lines -> lines.forEach { boardingList.add(it) } }
@@ -21,7 +21,7 @@ class BinaryBoarding(private val inputFile : String):Solution {
     }
 
     private fun createIdList(): MutableList<Int> {
-        var idList = mutableListOf<Int>()
+        val idList = mutableListOf<Int>()
         process().forEach {
             idList.add(calculateID(it))
         }

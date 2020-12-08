@@ -8,13 +8,13 @@ import java.lang.NumberFormatException
 
 class PassportProcessing(private val inputFile : String) : Solution {
 
-    override fun process(): MutableList<PassPort> {
+    fun process(): MutableList<PassPort> {
         val inputStream: InputStream = File(inputFile).inputStream()
         val passportList = mutableListOf<PassPort>()
         var passPortTemp = PassPort()
         inputStream.bufferedReader().useLines { lines ->
             lines.forEach { paramPort ->
-                if (paramPort.isEmpty) {
+                if (paramPort.isBlank()) {
                     passportList.add(passPortTemp)
                     passPortTemp = PassPort()
                 } else {

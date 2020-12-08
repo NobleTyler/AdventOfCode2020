@@ -6,7 +6,7 @@ import java.io.InputStream
 import java.math.BigInteger
 
 class TobogganTrajectory:Solution {
-    override fun process() : ArrayList<String> {
+    fun process() : ArrayList<String> {
         val hillArray = arrayListOf<String>()
         val inputStream: InputStream = File("src/dayThree/input.txt").inputStream()
         inputStream.bufferedReader().useLines { lines -> lines.forEach {
