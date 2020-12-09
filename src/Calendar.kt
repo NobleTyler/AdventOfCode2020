@@ -1,6 +1,8 @@
+import dayEight.HandheldHalting
 import dayFive.BinaryBoarding
 import dayFour.PassportProcessing
 import dayOne.RepairKit
+import daySeven.HandyHaversacks
 import daySix.CustomCustoms
 import dayThree.TobogganTrajectory
 import dayTwo.PasswordPhilosophy
@@ -11,12 +13,14 @@ fun main(){
     val passportProcessing = PassportProcessing("src/dayFour/input.txt")
     val boarding = BinaryBoarding("src/dayFive/input.txt")
     val customCustoms = CustomCustoms("src/daySix/input.txt")
-
+    val handyHaversacks = HandyHaversacks("src/daySeven/input.txt")
+    val handheldHalting = HandheldHalting("src/dayEight/input.txt")
     println("On the first day of Christmas my code gave to me: "+repKit.partOne()+" and "+repKit.partTwo())
     println("On the second day of Christmas my code gave to me: "+passwordPhilosophy.partOne(passwordPhilosophy.process())+" and "+ passwordPhilosophy.partTwo(passwordPhilosophy.process()))
     println("On the third day of Christmas my code gave to me: "+tobogganTrajectory.partOne(tobogganTrajectory.process(),3,1) +" and "+ tobogganTrajectory.partTwo())
     println("On the fourth day of Christmas my code gave to me: "+passportProcessing.partOne() +" and "+ passportProcessing.partTwo())
     println("On the fifth day of Christmas my code gave to me: "+boarding.partOne() +" and "+ boarding.partTwo())
     println("On the sixth day of Christmas my code gave to me: "+customCustoms.partOne() +" and "+ customCustoms.partTwo())
-    println("On the seventh day of Christmas my code gave to me: "+boarding.partOne() +" and "+ boarding.partTwo())
+    println("On the seventh day of Christmas my code gave to me: "+handyHaversacks.partOne() +" and "+ handyHaversacks.partTwo())
+    println("On the eighth day of Christmas my code gave to me: "+handheldHalting.partOne() +" and "+ handheldHalting.partTwo())
 }

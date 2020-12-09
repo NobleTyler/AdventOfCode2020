@@ -8,7 +8,7 @@ class HaltingTest {
 
     @Test
     fun `input is processed` (){
-        assertEquals("nop +0",handheldHalting.process()[0])
+        assertEquals("nop +0",handheldHalting.process("src/dayEight/testText")[0])
 
     }
     @Test
