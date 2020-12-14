@@ -2,9 +2,18 @@
 package daySeven
 
 import Solution
+import java.io.File
+import java.io.InputStream
 
 class HandyHaversacks(private val inputFile:String) :Solution {
     val relationships :Set<BagRule> = parseInput(process(inputFile))
+
+    fun process(inputFile:String ): MutableList<String> {
+        val inputStream: InputStream = File(inputFile).inputStream()
+        val ret = mutableListOf<String>()
+        inputStream.bufferedReader().useLines { lines -> lines.forEach { ret.add(it) } }
+        return ret
+    }
 
      fun parseInput(input: List<String> = process((inputFile))): Set<BagRule> =
             input.filterNot { it.contains("no other") }.flatMap { row ->

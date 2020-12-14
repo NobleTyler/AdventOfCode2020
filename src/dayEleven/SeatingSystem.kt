@@ -1,0 +1,4 @@
+package dayEleven
+
+class SeatingSystem {
+}
