@@ -1,0 +1,4 @@
+package frequencyQuestions
+
+class Subsequence {
+}
